@@ -44,6 +44,11 @@ async function run(endpoint, method = "GET", body = null) {
   } catch {
     // API:t returnerade inte JSON
   }
+  if (response.status === 401) {
+    const error = new Error("Du måste vara inloggad för att kunna spela.");
+    error.status = 401;
+    throw error;
+  }
 
   const error = new Error(
     errorData?.detail || errorData?.message || `HTTP error ${response.status}`,
