@@ -36,7 +36,7 @@ const gameCode = "9WTWLS";
 try {
   const data = await post(`games/${gameCode}/roll`);
 } catch (error) {
-  console.error(error.data.detail);
+  console.error(error.message);
 }
 const me = await get("auth/me");
 console.log(me);

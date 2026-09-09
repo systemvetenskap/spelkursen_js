@@ -13,13 +13,12 @@ export async function get(endpoint) {
 export async function post(endpoint, body) {
   return await run(endpoint, "POST", body);
 }
-
 async function run(endpoint, method = "GET", body = null) {
   const url = `${apiEndpointBase}/${endpoint}`;
 
-  // Hämta aktuell token vid varje anrop
   const token = localStorage.getItem("token");
   const headers = {};
+
   if (token) {
     headers["Authorization"] = `Bearer ${token}`;
   }
@@ -34,12 +33,10 @@ async function run(endpoint, method = "GET", body = null) {
     body: body !== null ? JSON.stringify(body) : null,
   });
 
-  // Lyckat anrop
   if (response.ok) {
     return await response.json();
   }
 
-  // Försök läsa API:ets felmeddelande
   let errorData = null;
 
   try {
@@ -48,16 +45,8 @@ async function run(endpoint, method = "GET", body = null) {
     // API:t returnerade inte JSON
   }
 
-  // inte inloggad
-  // detta är med som exempel för att här kanske du vill göra något special
-
-  if (response.status === 401) {
-    throw new Error(errorData?.message || "Unauthorized");
-  }
-
-  // andra felen skickar vi som de är direkt
   const error = new Error(
-    errorData?.message || `HTTP error ${response.status}`,
+    errorData?.detail || errorData?.message || `HTTP error ${response.status}`,
   );
 
   error.status = response.status;
