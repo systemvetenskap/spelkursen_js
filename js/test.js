@@ -1,5 +1,5 @@
 console.log("innan");
-import { get } from "./api-engine.js";
+import { get, post } from "./api-engine.js";
 
 async function getProduct() {
   try {
@@ -32,7 +32,12 @@ async function findMe() {
   const result = await response.json();
   console.log(result.name);
 }
-
-const data = await get("roll");
-
+const gameCode = "9WTWLS";
+try {
+  const data = await post(`games/${gameCode}/roll`);
+} catch (error) {
+  console.error(error.data.detail);
+}
+const me = await get("auth/me");
+console.log(me);
 await findMe();

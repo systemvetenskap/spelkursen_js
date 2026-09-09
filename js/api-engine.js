@@ -3,8 +3,15 @@ const version = "v1";
 
 const apiEndpointBase = `${baseUrl}/${version}`;
 
+// --------------------------------------------------
+// Exponerar metoder för att hämta (get) och skicka (post)
+// --------------------------------------------------
 export async function get(endpoint) {
   return await run(endpoint, "GET");
+}
+
+export async function post(endpoint, body) {
+  return await run(endpoint, "POST", body);
 }
 
 async function run(endpoint, method = "GET", body = null) {
@@ -12,7 +19,7 @@ async function run(endpoint, method = "GET", body = null) {
 
   // Hämta aktuell token vid varje anrop
   const token = localStorage.getItem("token");
-
+  const headers = {};
   if (token) {
     headers["Authorization"] = `Bearer ${token}`;
   }
@@ -41,13 +48,20 @@ async function run(endpoint, method = "GET", body = null) {
     // API:t returnerade inte JSON
   }
 
+  // inte inloggad
+  // detta är med som exempel för att här kanske du vill göra något special
+
   if (response.status === 401) {
     throw new Error(errorData?.message || "Unauthorized");
   }
 
+  // andra felen skickar vi som de är direkt
   const error = new Error(
     errorData?.message || `HTTP error ${response.status}`,
   );
+
+  error.status = response.status;
+  error.data = errorData;
 
   throw error;
 }
