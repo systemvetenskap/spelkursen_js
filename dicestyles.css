@@ -1,0 +1,15 @@
+.dice {
+  font-size: 3rem;
+  font-weight: bold;
+  padding: 1rem;
+}
+
+.high {
+  background-color: green;
+  color: white;
+}
+
+.low {
+  background-color: red;
+  color: white;
+}

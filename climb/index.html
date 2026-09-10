@@ -1,0 +1,94 @@
+<!doctype html>
+<html lang="sv">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Skuggmassivet — Klätterföraren</title>
+    <link rel="stylesheet" href="./css/styles.css" />
+  </head>
+  <body>
+    <header class="hero">
+      <div class="hero__overlay"></div>
+      <nav class="nav container">
+        <div class="brand">
+          <span class="brand__mark">▲</span><span>SKUGGMASSIVET</span>
+        </div>
+        <span class="nav__tag">KLÄTTERFÖRARE</span>
+      </nav>
+      <div class="hero__content container">
+        <p class="eyebrow">Norrlands vildaste vertikaler</p>
+        <h1>KLÄTTRA<br /><em>UTANFÖR KARTAN.</em></h1>
+        <p class="hero__lead">
+          Fyra berg. Dussintals linjer. En massiv dag på klippan.
+        </p>
+        <a class="hero__cta" href="#routes">Utforska lederna <span>↓</span></a>
+      </div>
+      <div class="hero__stats container">
+        <div><strong id="routeCount">—</strong><span>leder</span></div>
+        <div><strong id="cragCount">—</strong><span>berg</span></div>
+        <div><strong id="maxLength">—</strong><span>meter toppled</span></div>
+      </div>
+    </header>
+
+    <main>
+      <section id="routes" class="section container">
+        <div class="section__intro">
+          <p class="eyebrow">Välj din linje</p>
+          <h2>LEDERNA</h2>
+          <p>
+            Bläddra bland etablerade linjer. Klicka på en led för att öppna
+            topo-info, grad, längd och vem som satte den på kartan.
+          </p>
+        </div>
+
+        <div class="toolbar">
+          <label class="search"
+            ><span>⌕</span
+            ><input
+              id="search"
+              type="search"
+              placeholder="Sök led, berg eller klättrare…"
+          /></label>
+          <select id="difficulty">
+            <option value="">Alla grader</option>
+            <option value="4">4x</option>
+            <option value="5">5x</option>
+            <option value="6">6x</option>
+            <option value="7">7x</option>
+          </select>
+          <label class="toggle"
+            ><input id="boltsOnly" type="checkbox" /><span
+              >Endast borrbultat</span
+            ></label
+          >
+        </div>
+
+        <div class="content-grid">
+          <div id="routeList" class="route-list" aria-live="polite"></div>
+
+          <aside id="detail" class="detail detail--empty">
+            <div class="detail__empty">
+              <span class="detail__icon">⛰</span>
+              <p>Välj en led</p>
+              <small>Detaljerna dyker upp här.</small>
+            </div>
+          </aside>
+        </div>
+      </section>
+
+      <section class="quote container">
+        <div class="quote__line"></div>
+        <p>
+          “Det är något med vinden på Skuggberget.<br /><strong
+            >Du kommer hit för leden. Du stannar för utsikten.</strong
+          >”
+        </p>
+      </section>
+    </main>
+
+    <footer class="footer container">
+      <div><strong>SKUGGMASSIVET</strong><span>Fiktiv klätterförare</span></div>
+      <span id="status">Laddar data…</span>
+    </footer>
+  </body>
+</html>
