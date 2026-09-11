@@ -1,0 +1,17 @@
+{
+  "id": 2,
+  "namn": "Trollväggen",
+  "svarighetsgrad": "5c",
+  "berg": "Skuggberget",
+  "skapadAv": "Johan Lind",
+  "langd": 18,
+  "borrbultad": false,
+  "pitchar": 1,
+  "rekommenderadUtrustning": [
+    "12 quickdraws",
+    "rep 60 m",
+    "hjälm"
+  ],
+  "beskrivning": "En fiktiv beskrivning av Trollväggen på Skuggberget. Linjen kombinerar tydliga rörelser, utsatt terräng och en fin avslutning.",
+  "varning": "Fiktivt undervisningsdata. Kontrollera alltid aktuell information innan klättring."
+}

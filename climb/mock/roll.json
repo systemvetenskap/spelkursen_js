@@ -1,0 +1,40 @@
+{
+  "gameCode": "2LRVCQ",
+  "roomCode": "95TVB3",
+  "updateReason": "DiceRolled",
+  "currentDiceRoll": {
+    "die1": 2,
+    "die2": 4,
+    "diceCount": 2,
+    "total": 6
+  },
+  "validMoves": [[1, 5], [6]],
+  "rules": {
+    "isMultiplayer": false,
+    "hasTurnTimer": false,
+    "diceRollTimeSeconds": null,
+    "thinkTimeSeconds": null
+  },
+  "currentPlayerUserId": "217c3ba5-92ac-4bb8-86be-7df1b39fb9f0",
+  "currentPlayerName": "Erik Öberg",
+  "isStarted": true,
+  "isGameOver": false,
+  "tiedWinners": false,
+  "players": [
+    {
+      "userId": "217c3ba5-92ac-4bb8-86be-7df1b39fb9f0",
+      "name": "Erik Öberg",
+      "isActive": true,
+      "isCurrentPlayer": true,
+      "isHost": true,
+      "hasWon": false,
+      "hasLost": false,
+      "hasLeft": false,
+      "exitReason": null,
+      "currentScore": 40,
+      "turnDeadlineUtc": null,
+      "openNumbers": [1, 4, 5, 6, 7, 8, 9]
+    }
+  ],
+  "spectators": []
+}

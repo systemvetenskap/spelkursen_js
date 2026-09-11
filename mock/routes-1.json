@@ -1,0 +1,17 @@
+{
+  "id": 1,
+  "namn": "Falkens Flykt",
+  "svarighetsgrad": "6a",
+  "berg": "Skuggberget",
+  "skapadAv": "Anna Bergström",
+  "langd": 24,
+  "borrbultad": true,
+  "pitchar": 1,
+  "rekommenderadUtrustning": [
+    "12 quickdraws",
+    "rep 60 m",
+    "hjälm"
+  ],
+  "beskrivning": "En fiktiv beskrivning av Falkens Flykt på Skuggberget. Linjen kombinerar tydliga rörelser, utsatt terräng och en fin avslutning.",
+  "varning": "Fiktivt undervisningsdata. Kontrollera alltid aktuell information innan klättring."
+}

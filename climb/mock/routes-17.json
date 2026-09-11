@@ -1,0 +1,13 @@
+{
+  "id": 17,
+  "namn": "Tysta Minuten",
+  "svarighetsgrad": "6a",
+  "berg": "Vindklippan",
+  "skapadAv": "Karin Sund",
+  "langd": 22,
+  "borrbultad": false,
+  "beskrivning": "En luftig och teknisk linje genom den ljusaste delen av Vindklippan. Håll huvudet kallt på den tunna traversen och njut av utsikten över dalen.",
+  "pitchar": 1,
+  "rekommenderadUtrustning": ["12 quickdraws", "rep 60 m", "hjälm"],
+  "varning": "Äldre säkringar förekommer på de övre metrarna. Kontrollera alltid aktuell förar- och klippstatus."
+}
